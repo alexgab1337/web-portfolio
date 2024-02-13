@@ -1,2 +1,0 @@
-# webPortfolio 
-# GabrichCode
