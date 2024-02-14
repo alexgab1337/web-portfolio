@@ -78,6 +78,42 @@ a:hover {
 }
 
 
+.home-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #B6B8BC;
+    height: 22rem;
+    width: 60rem;
+    justify-content: space-around;
+    align-items: left;
+    left: 50vh;
+    top: 17vh;
+
+    /* TODO: центрировать эту хуиту */
+}
+
+.home-title {
+    position: relative;
+    right: 0.4rem;
+    font-size: 5rem;
+}
+
+.home-info-headings {
+    font-size: 2.5rem;
+}
+
+.home-paragraph {
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
 #about {
     height: 100vh;
     background-color: #202124;
