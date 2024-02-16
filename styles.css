@@ -8,24 +8,13 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0.35vw;
-    background-color: #202124;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #3C3C3C;
-    border-radius: 1rem;
-}
-
-::-webkit-scrollbar-track {
-    margin: 0.5vh 0;
+    display: none;
 }
 
 #home {
-    height: 100vh;
     background-color: #202124;
+    height: 100vh;
 }
-
 
 .home-nav {
     height: 10vh;   
@@ -45,13 +34,13 @@
     gap: 4rem;
 }
 
-a {
+.home-nav-menu-links {
     position: relative;
     text-decoration: none;
     color: #B6B8BC;
 }
 
-a:after {
+.home-nav-menu-links:after {
     content: '';
     position: absolute;
     background-color: rgb(210, 210, 210);
@@ -63,11 +52,11 @@ a:after {
     border-radius: 1rem;
 }
 
-a:hover::after {
+.home-nav-menu-links:hover::after {
     width: 100%;
 }
 
-a:hover {
+.home-nav-menu-links:hover {
     color: rgb(210, 210, 210);
     transition: 300ms ease;
 }
@@ -77,9 +66,15 @@ a:hover {
     justify-content: space-around;
 }
 
+.home-info-centerer{ 
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
 
 .home-info {
-    position: relative;
     display: flex;
     flex-direction: column;
     color: #B6B8BC;
@@ -87,10 +82,6 @@ a:hover {
     width: 60rem;
     justify-content: space-around;
     align-items: left;
-    left: 50vh;
-    top: 17vh;
-
-    /* TODO: центрировать эту хуиту */
 }
 
 .home-title {
@@ -107,14 +98,12 @@ a:hover {
     font-size: 1.5rem;
 }
 
-
-
-
-
-
-
-
 #about {
     height: 100vh;
     background-color: #202124;
+}
+
+.home-paragraph-last, .home-title {
+    color: #fff;
+    text-shadow: 0 0 0.30rem #fff;
 }
