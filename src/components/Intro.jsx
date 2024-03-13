@@ -26,7 +26,7 @@ function Intro() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}>
-                <a href="#contact" className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:scale-105 hover:bg-gray-950 active:scale-105 transition">Contact me <FaArrowRight className="opacity-70 text-[1rem]" /></a>
+                <a href="#contact" className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:scale-110 hover:bg-gray-950 active:scale-105 transition">Contact me <FaArrowRight className="opacity-90 text-[1rem]" /></a>
 
                 <a href="/CV.pdf" download className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:scale-110 active:scale-105 transition  border border-black/10 ">Download CV <HiDownload /></a>
 
