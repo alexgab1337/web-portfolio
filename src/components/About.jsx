@@ -2,10 +2,11 @@ import { motion } from "framer-motion"
 
 function About() {
     return (
-        <motion.section className="text-center leading-8 mb-40 w-[55rem] text-lg" 
+        <motion.section className="text-center leading-8 mb-40 w-[55rem] text-lg scroll-mt-40" 
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.175 }}
+        id="about"
         >
             <h2 className="text-3xl font-medium capitalize  mb-8"> About me </h2>
             <p className="mb-3">

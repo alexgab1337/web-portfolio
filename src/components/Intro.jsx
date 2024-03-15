@@ -5,7 +5,7 @@ import { HiDownload } from "react-icons/hi";
 
 function Intro() {
     return (
-        <section className=" text-center">
+        <section className=" text-center scroll-mt-[100rem]" id="home">
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{type: "tween", duration: 0.2}}className="flex items-center justify-center">
                 <img src="/my_avatar.jpg" alt="My avatar" className="h-36 w-36 rounded-full border-[0.35rem] border-white object-cover shadow-xl "/>
             </motion.div>
