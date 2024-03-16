@@ -1,6 +1,21 @@
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { ActiveSectionContext } from "../context/active-section-context.jsx";
+import { useContext, useEffect } from "react";
 
 function About() {
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  });
+  const { setActiveSection, timeOfLastClick } =
+    useContext(ActiveSectionContext);
+
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("About");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
+
   return (
     <motion.section
       className="text-center leading-8 mb-40 w-[55rem] text-lg scroll-mt-40"
@@ -8,6 +23,7 @@ function About() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
+      ref={ref}
     >
       <h2 className="text-3xl font-medium capitalize  mb-8"> About me </h2>
       <p className="mb-3">

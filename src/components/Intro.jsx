@@ -2,10 +2,24 @@ import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaTelegram, FaGithub } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+import { useInView } from "react-intersection-observer";
+import { ActiveSectionContext } from "../context/active-section-context.jsx";
+import { useContext, useEffect } from "react";
 
 function Intro() {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+  const { setActiveSection, timeOfLastClick } = useContext(ActiveSectionContext);
+
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
+
   return (
-    <section className=" text-center scroll-mt-[100rem]" id="home">
+    <section ref={ref} className=" text-center scroll-mt-[100rem]" id="home">
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
