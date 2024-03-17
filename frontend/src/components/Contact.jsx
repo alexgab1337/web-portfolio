@@ -13,13 +13,14 @@ function Contact() {
     setIsSubmitting(true);
 
     const formData = new FormData(event.currentTarget);
+    const apiUrl = import.meta.env.VITE_API_URL;
     const data = {
       senderEmail: formData.get("senderEmail"),
       message: formData.get("message"),
     };
 
     try {
-      const response = await fetch("http://localhost:3001/send-email", {
+      const response = await fetch(`${apiUrl}/send-email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
