@@ -7,7 +7,7 @@ function Projects() {
   const { ref } = useSectionInView({ sectionName: "Projects", threshold: 0.5 });
 
   return (
-    <section ref={ref} id="projects" className="scroll-mt-32">
+    <section ref={ref} id="projects" className="scroll-mt-32 mb-28">
       <h2 className="text-3xl font-medium capitalize mb-8 text-center">
         {" "}
         Projects{" "}

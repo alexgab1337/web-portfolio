@@ -4,8 +4,11 @@ import Divider from "./components/Divider.jsx";
 import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import ActiveSectionContextProvider from "./context/active-section-context.jsx";
-
-//TODO custom scroll + section tracker +
+import Skills from "./components/Skills.jsx";
+import Experience from "./components/Experience.jsx";
+import Contact from "./components/Contact.jsx";
+import { Toaster } from "react-hot-toast";
+import Footer from "./components/Footer.jsx"
 
 function App() {
   return (
@@ -17,6 +20,11 @@ function App() {
           <Divider />
           <About />
           <Projects />
+          <Skills />
+          <Experience />
+          <Contact />
+          <Toaster position="top-right" />
+          <Footer />
         </ActiveSectionContextProvider>
       </div>
     </>

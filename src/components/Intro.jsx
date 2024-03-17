@@ -3,9 +3,13 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaTelegram, FaGithub } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import useSectionInView from "../hooks/hooks.js";
+import { ActiveSectionContext } from "../context/active-section-context.jsx";
+import { useContext } from "react";
 
 function Intro() {
   const { ref } = useSectionInView({ sectionName: "Home", threshold: 0.5 });
+  const { setActiveSection, setTimeOfLastClick } =
+    useContext(ActiveSectionContext);
 
   return (
     <section ref={ref} className=" text-center scroll-mt-[100rem]" id="home">
@@ -43,6 +47,10 @@ function Intro() {
         <a
           href="#contact"
           className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now);
+          }}
         >
           Contact me <FaArrowRight className="opacity-90 text-[1rem]" />
         </a>
@@ -50,7 +58,7 @@ function Intro() {
         <a
           href="/CV.pdf"
           download
-          className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:scale-110 active:scale-105 transition  border border-black/10 "
+          className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:scale-110 active:scale-105 transition border borderBlack "
         >
           Download CV <HiDownload />
         </a>
