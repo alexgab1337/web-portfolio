@@ -1,8 +1,7 @@
 import Navbar from "./components/Navbar.jsx";
 import Intro from "./components/Intro.jsx";
-import Divider from "./components/Divider.jsx";
+// import Divider from "./components/Divider.jsx";
 import About from "./components/About.jsx";
-import Projects from "./components/Projects.jsx";
 import ActiveSectionContextProvider from "./context/active-section-context.jsx";
 import Skills from "./components/Skills.jsx";
 import Experience from "./components/Experience.jsx";
@@ -17,9 +16,7 @@ function App() {
         <ActiveSectionContextProvider>
           <Navbar />
           <Intro />
-          <Divider />
           <About />
-          <Projects />
           <Skills />
           <Experience />
           <Contact />

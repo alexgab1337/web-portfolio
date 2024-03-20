@@ -14,8 +14,17 @@ function Contact() {
 
     const formData = new FormData(event.currentTarget);
     const apiUrl = import.meta.env.VITE_API_URL;
+    const email = formData.get("senderEmail");
+
+    const pattern = /^([a-z\d.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+    if (!pattern.test(email)) {
+      toast.error("Please enter a valid email address.");
+      setIsSubmitting(false);
+      return;
+    }
+
     const data = {
-      senderEmail: formData.get("senderEmail"),
+      senderEmail: email,
       message: formData.get("message"),
     };
 
@@ -47,7 +56,7 @@ function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-32 w-[min(100%,38rem)] text-center"
+      className="mb-[13rem] w-[min(100%,38rem)] text-center mt-[4rem] text-neutral-800"
       initial={{
         opacity: 0,
       }}
@@ -66,7 +75,7 @@ function Contact() {
         Contact Me{" "}
       </h2>
       <p className="text-gray-700 -mt-6">
-        Please contact me directly at{" "}
+        Contact me directly at{" "}
         <a className="underline" href="mailto:gabrichteam@gmail.com">
           gabrichteam@gmail.com
         </a>{" "}
@@ -83,7 +92,7 @@ function Contact() {
           name="senderEmail"
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4"
+          className="h-52 my-3 rounded-lg borderBlack p-4 resize-none"
           placeholder="Your message"
           required
           maxLength={500}

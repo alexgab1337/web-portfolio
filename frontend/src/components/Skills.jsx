@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: -100,
   },
   animate: (index) => ({
     opacity: 1,
@@ -23,16 +23,16 @@ function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="w-[53rem] scroll-mt-28 text-center mb-40"
+      className="max-w-5xl scroll-mt-[15rem] text-center mb-[32rem] text-neutral-800 "
     >
-      <h2 className="text-3xl font-medium capitalize mb-8 text-center">
+      <h2 className="text-3xl font-medium capitalize mb-[4rem] text-center">
         {" "}
         My skills{" "}
       </h2>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+      <ul className="flex flex-wrap justify-center gap-4 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="bg-white border border-black/[0.1] rounded-xl px-5 py-3"
+            className="bg-white border border-black/[0.1] rounded-full px-5 py-3 flex justify-center items-center gap-2 font-medium"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -42,7 +42,12 @@ function Skills() {
             }}
             custom={index}
           >
-            {skill}
+            {skill.name}
+            <img
+              src={skill.icon}
+              alt={`${skill.name} icon`}
+              className="size-8"
+            />
           </motion.li>
         ))}
       </ul>

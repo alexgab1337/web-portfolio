@@ -8,10 +8,17 @@ import React from "react";
 import useSectionInView from "../hooks/hooks.js";
 
 function Experience() {
-  const { ref } = useSectionInView({ sectionName: "Experience", threshold: 0.5 });
+  const { ref } = useSectionInView({
+    sectionName: "Experience",
+    threshold: 0.5,
+  });
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-32 mb-40">
+    <section
+      id="experience"
+      ref={ref}
+      className="scroll-mt-[5rem] mb-40 text-neutral-800"
+    >
       <h2 className="text-3xl font-medium capitalize mb-8 text-center">
         {" "}
         Experience{" "}
@@ -28,7 +35,7 @@ function Experience() {
                 padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
-                borderRight: "0.4rem solid #9ca3af",
+                borderRight: "0.4rem solid gray",
               }}
               date={item.date}
               icon={item.icon}

@@ -1,7 +1,18 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { MdOutlineWorkOutline } from "react-icons/md";
+import { BiCodeCurly } from "react-icons/bi";
 import { LuGraduationCap } from "react-icons/lu";
+import cPlusIcon from "./svgs/c++.svg";
+import cIcon from "./svgs/c.svg";
+import pythonIcon from "./svgs/python.svg";
+import jsIcon from "./svgs/JS.svg";
+import htmlIcon from "./svgs/html.svg";
+import cssIcon from "./svgs/css.svg";
+import reactIcon from "./svgs/react.svg";
+import nodeIcon from "./svgs/nodejs.svg";
+import expressIcon from "./svgs/express.svg";
+import tailwindIcon from "./svgs/tailwind.svg";
+import framerIcon from "./svgs/framer-motion.svg";
 
 export const links = [
   {
@@ -12,10 +23,10 @@ export const links = [
     name: "About",
     hash: "#about",
   },
-  {
-    name: "Projects",
-    hash: "#projects",
-  },
+  // {
+  //   name: "Projects",
+  //   hash: "#projects",
+  // },
   {
     name: "Skills",
     hash: "#skills",
@@ -55,50 +66,42 @@ export const projectsData = [
 ];
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  { name: "C", icon: cIcon },
+  { name: "C++", icon: cPlusIcon },
+  { name: "Python", icon: pythonIcon },
+  { name: "HTML", icon: htmlIcon },
+  { name: "CSS", icon: cssIcon },
+  { name: "JS", icon: jsIcon },
+  { name: "React", icon: reactIcon },
+  { name: "TailwindCSS", icon: tailwindIcon },
+  { name: "Node.js", icon: nodeIcon },
+  { name: "Express", icon: expressIcon },
+  { name: "Framer Motion", icon: framerIcon },
 ];
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "System Administrator",
+    location: "Moscow, Russia",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I worked as a System Administrator in a private construction company. I installed, configurated and supported smooth operation and safety of applications, websites, local networks, and all software that was used in that company.",
+    icon: React.createElement(MdOutlineWorkOutline),
+    date: "2022 - 2023",
+  },
+  {
+    title: "Graduated private high-school",
+    location: "Moscow, Russia",
+    description:
+      "I graduated a private high school in the center of Moscow with 3 years of expertise in Python.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2023",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Studying Computer Science",
+    location: "Chicago, IL",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "I'm now actively studying Computer Science at the University of illinois at Chicago. My current interest is machine and deep learning.",
+    icon: React.createElement(BiCodeCurly),
+    date: "2023 - 2024",
   },
 ];
